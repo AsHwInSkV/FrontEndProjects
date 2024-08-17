@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musixc App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="music-app">
+            <div class="upper-controls">
+                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="song-area">
+                <img src="./media/thumbnail.png" alt="" class="song-img">
+                <h1>Despacito</h1>
+                <p>Luis Fonsi Ft. Puerto Rican</p>
+            </div>
+            <audio id="song">
+                <source src="./media/Go-NEFFEX.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range"  value="0" max="100" class="slider">
+            <div class="controls">
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div class="play-button"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                <div><i class="fa-solid fa-forward"></i></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

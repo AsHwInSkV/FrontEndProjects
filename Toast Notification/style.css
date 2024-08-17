@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(236, 171, 171);
+}
+.buttons{
+    padding: 40px;
+}
+.buttons button{
+    border: none;
+    color: white;
+    background: rgb(67, 64, 64);
+    padding: 10px 30px 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+.buttons button:hover{
+    background: black;
+}
+.toastbox{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+.toast{
+    width: 400px;
+    height: 80px;
+    background: white;
+    font-weight: 500;
+    margin: 15px 0;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveLeft 0.7s linear forwards;
+}
+@keyframes moveLeft {
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+.toast::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgb(2, 135, 2);
+    animation: anim 5s linear forwards;
+    animation-delay: 1s;
+    
+}
+.toast.error::after{
+    background: red;
+}
+.toast.invalid::after{
+    background: rgb(255, 255, 31);
+}
+
+@keyframes anim {
+    100%{
+        width: 0;
+    }
+    
+}

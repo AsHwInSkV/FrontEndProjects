@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+.switch{
+    position: relative;
+    background: white;
+    width: 60px;
+    height: 34px;
+    border-radius: 20px;
+}
+.slider{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(196, 195, 195);
+    border-radius: 20px;
+    transition: .4s;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    background: white;
+    width: 26px;
+    height: 26px;
+    left:4px;
+    top: 4px;
+    border-radius: 50%;
+    transition: .4s;
+}
+.move > .slider::before{
+    transform: translateX(26px);
+    background: black;
+    
+}
+.move > .slider{
+    background-color: white;
+}
